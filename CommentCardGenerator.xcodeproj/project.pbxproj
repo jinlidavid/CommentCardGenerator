@@ -71,6 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11A4E5B627C6F66800DB83FD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		CC4B44B127B282C600F2BC56 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +103,7 @@
 			children = (
 				CC4B44BD27B282C600F2BC56 /* CommentCardGeneratorApp.swift */,
 				CC4B44BF27B282C600F2BC56 /* ContentView.swift */,
+				11A4E5B627C6F66800DB83FD /* New Group */,
 				CC4B44C127B282C800F2BC56 /* Assets.xcassets */,
 				CC4B44C327B282C800F2BC56 /* Preview Content */,
 			);

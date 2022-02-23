@@ -11,7 +11,7 @@ import SwiftUI
 struct CommentCardGeneratorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(isHappy: true, isEnjoyable: true)
+            ContentView()
         }
     }
 }
