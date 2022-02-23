@@ -13,15 +13,15 @@ struct ContentView: View {
     @State private var moreEW: Bool = false
     @State private var lessRepetition: Bool = false
     @State private var isFast: Bool = false
-    @State private var isCompSci: Bool = false
+    @State private var isCompSci: Bool = true
     @State private var isMaths: Bool = false
-    @State private var isMathsDisabled: Bool = false
+    @State private var isMathsDisabled: Bool = true
     @State private var isCompSciDisabled: Bool = false
     @State var subjectChosen: Bool = false
     @State var textFieldText: String = ""
     @State var dataArray: [String] = []
     @State var comment: String = ""
-    @State var subject: String = ""
+    @State var subject: String = "in Computer Science"
 
     
     var emoji_feelings: String {
@@ -60,7 +60,7 @@ struct ContentView: View {
         )
         let compSciSelected = Binding<Bool> (get: {self.isCompSci}, set: {newValue in
             self.isCompSci = newValue
-            self.subject = "Computer Science"
+            self.subject = "in Computer Science"
             self.subjectChosen = newValue
             if newValue == true {
                 self.isMathsDisabled = true
@@ -71,7 +71,7 @@ struct ContentView: View {
         )
         let mathsSelected = Binding<Bool> (get: {self.isMaths}, set: {newValue in
             self.isMaths = newValue
-            self.subject = "Maths"
+            self.subject = "in Maths"
             self.subjectChosen = newValue
             if newValue == true {
                 self.isCompSciDisabled = true
@@ -122,7 +122,7 @@ struct ContentView: View {
                 }
                 
                 Section{
-                    Text("I am feeling \(feelings) in \(subject). \(moreEW ? "I do feel that too many EWs are set." : "The amount of EW is perfect.") \(lessRepetition ? "I also feel that the divs are too repetitive." : "I enjoy the variety of the lessons.")\(isFast ? "I sometimes find that the lessons are hard to follow." : " I think the pacing of each lesson is good.") \(textFieldText)")
+                    Text("I am feeling \(feelings) \(subject). \(moreEW ? "I do feel that too many EWs are set." : "The amount of EW is perfect.") \(lessRepetition ? "I also feel that the divs are too repetitive." : "I enjoy the variety of the lessons.")\(isFast ? "I sometimes find that the lessons are hard to follow." : " I think the pacing of each lesson is good.") \(textFieldText)")
                 }
                 .padding()
                 Spacer()
